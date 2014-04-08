@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6EA5616918F3DDEB00B51129 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616818F3DDEB00B51129 /* Foundation.framework */; };
+		6EA5616B18F3DDEB00B51129 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616A18F3DDEB00B51129 /* CoreGraphics.framework */; };
+		6EA5616D18F3DDEB00B51129 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616C18F3DDEB00B51129 /* UIKit.framework */; };
+		6EA5617318F3DDEB00B51129 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EA5617118F3DDEB00B51129 /* InfoPlist.strings */; };
+		6EA5617518F3DDEB00B51129 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5617418F3DDEB00B51129 /* main.m */; };
+		6EA5617918F3DDEB00B51129 /* RCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5617818F3DDEB00B51129 /* RCAppDelegate.m */; };
+		6EA5617C18F3DDEB00B51129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA5617A18F3DDEB00B51129 /* Main.storyboard */; };
+		6EA5617F18F3DDEB00B51129 /* RCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5617E18F3DDEB00B51129 /* RCViewController.m */; };
+		6EA5618118F3DDEB00B51129 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA5618018F3DDEB00B51129 /* Images.xcassets */; };
+		6EA5618818F3DDEB00B51129 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5618718F3DDEB00B51129 /* XCTest.framework */; };
+		6EA5618918F3DDEB00B51129 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616818F3DDEB00B51129 /* Foundation.framework */; };
+		6EA5618A18F3DDEB00B51129 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616C18F3DDEB00B51129 /* UIKit.framework */; };
+		6EA5619218F3DDEB00B51129 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EA5619018F3DDEB00B51129 /* InfoPlist.strings */; };
+		6EA5619418F3DDEB00B51129 /* RCStorageHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5619318F3DDEB00B51129 /* RCStorageHelperTests.m */; };
+		6EA561A118F3E00500B51129 /* NSManagedObject+RCStorageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA561A018F3E00500B51129 /* NSManagedObject+RCStorageHelper.m */; };
+		6EA561A318F3E05400B51129 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA561A218F3E05400B51129 /* CoreData.framework */; };
+		6EA561AB18F3E12600B51129 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EA561A918F3E12600B51129 /* Model.xcdatamodeld */; };
+		6EA561B118F3E62A00B51129 /* RCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA561B018F3E62A00B51129 /* RCTableViewController.m */; };
+		6EA561CA18F43C4900B51129 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA561C918F43C4900B51129 /* Weather.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EA5618B18F3DDEB00B51129 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EA5615D18F3DDEB00B51129 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EA5616418F3DDEB00B51129;
+			remoteInfo = RCStorageHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6EA5616518F3DDEB00B51129 /* RCStorageHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCStorageHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EA5616818F3DDEB00B51129 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6EA5616A18F3DDEB00B51129 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6EA5616C18F3DDEB00B51129 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6EA5617018F3DDEB00B51129 /* RCStorageHelper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RCStorageHelper-Info.plist"; sourceTree = "<group>"; };
+		6EA5617218F3DDEB00B51129 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6EA5617418F3DDEB00B51129 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6EA5617618F3DDEB00B51129 /* RCStorageHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCStorageHelper-Prefix.pch"; sourceTree = "<group>"; };
+		6EA5617718F3DDEB00B51129 /* RCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCAppDelegate.h; sourceTree = "<group>"; };
+		6EA5617818F3DDEB00B51129 /* RCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCAppDelegate.m; sourceTree = "<group>"; };
+		6EA5617B18F3DDEB00B51129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6EA5617D18F3DDEB00B51129 /* RCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCViewController.h; sourceTree = "<group>"; };
+		6EA5617E18F3DDEB00B51129 /* RCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCViewController.m; sourceTree = "<group>"; };
+		6EA5618018F3DDEB00B51129 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6EA5618618F3DDEB00B51129 /* RCStorageHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCStorageHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EA5618718F3DDEB00B51129 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6EA5618F18F3DDEB00B51129 /* RCStorageHelperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RCStorageHelperTests-Info.plist"; sourceTree = "<group>"; };
+		6EA5619118F3DDEB00B51129 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6EA5619318F3DDEB00B51129 /* RCStorageHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCStorageHelperTests.m; sourceTree = "<group>"; };
+		6EA5619F18F3E00500B51129 /* NSManagedObject+RCStorageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+RCStorageHelper.h"; path = "Categories/NSManagedObject+RCStorageHelper.h"; sourceTree = "<group>"; };
+		6EA561A018F3E00500B51129 /* NSManagedObject+RCStorageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+RCStorageHelper.m"; path = "Categories/NSManagedObject+RCStorageHelper.m"; sourceTree = "<group>"; };
+		6EA561A218F3E05400B51129 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6EA561AA18F3E12600B51129 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		6EA561AF18F3E62A00B51129 /* RCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTableViewController.h; sourceTree = "<group>"; };
+		6EA561B018F3E62A00B51129 /* RCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTableViewController.m; sourceTree = "<group>"; };
+		6EA561C818F43C4900B51129 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		6EA561C918F43C4900B51129 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6EA5616218F3DDEB00B51129 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA561A318F3E05400B51129 /* CoreData.framework in Frameworks */,
+				6EA5616B18F3DDEB00B51129 /* CoreGraphics.framework in Frameworks */,
+				6EA5616D18F3DDEB00B51129 /* UIKit.framework in Frameworks */,
+				6EA5616918F3DDEB00B51129 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EA5618318F3DDEB00B51129 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA5618818F3DDEB00B51129 /* XCTest.framework in Frameworks */,
+				6EA5618A18F3DDEB00B51129 /* UIKit.framework in Frameworks */,
+				6EA5618918F3DDEB00B51129 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6EA5615C18F3DDEB00B51129 = {
+			isa = PBXGroup;
+			children = (
+				6EA5619D18F3DE6600B51129 /* Helper */,
+				6EA5616E18F3DDEB00B51129 /* RCStorageHelper */,
+				6EA5618D18F3DDEB00B51129 /* RCStorageHelperTests */,
+				6EA5616718F3DDEB00B51129 /* Frameworks */,
+				6EA5616618F3DDEB00B51129 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6EA5616618F3DDEB00B51129 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5616518F3DDEB00B51129 /* RCStorageHelper.app */,
+				6EA5618618F3DDEB00B51129 /* RCStorageHelperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EA5616718F3DDEB00B51129 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EA561A218F3E05400B51129 /* CoreData.framework */,
+				6EA5616818F3DDEB00B51129 /* Foundation.framework */,
+				6EA5616A18F3DDEB00B51129 /* CoreGraphics.framework */,
+				6EA5616C18F3DDEB00B51129 /* UIKit.framework */,
+				6EA5618718F3DDEB00B51129 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EA5616E18F3DDEB00B51129 /* RCStorageHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6EA561A518F3E0A500B51129 /* AppDelegate */,
+				6EA561A418F3E09D00B51129 /* Model */,
+				6EA561A718F3E0C400B51129 /* View */,
+				6EA561A618F3E0B500B51129 /* Controller */,
+				6EA561A818F3E0D000B51129 /* Resource */,
+				6EA5616F18F3DDEB00B51129 /* Supporting Files */,
+			);
+			path = RCStorageHelper;
+			sourceTree = "<group>";
+		};
+		6EA5616F18F3DDEB00B51129 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5617018F3DDEB00B51129 /* RCStorageHelper-Info.plist */,
+				6EA5617118F3DDEB00B51129 /* InfoPlist.strings */,
+				6EA5617418F3DDEB00B51129 /* main.m */,
+				6EA5617618F3DDEB00B51129 /* RCStorageHelper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EA5618D18F3DDEB00B51129 /* RCStorageHelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5619318F3DDEB00B51129 /* RCStorageHelperTests.m */,
+				6EA5618E18F3DDEB00B51129 /* Supporting Files */,
+			);
+			path = RCStorageHelperTests;
+			sourceTree = "<group>";
+		};
+		6EA5618E18F3DDEB00B51129 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5618F18F3DDEB00B51129 /* RCStorageHelperTests-Info.plist */,
+				6EA5619018F3DDEB00B51129 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EA5619D18F3DE6600B51129 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5619E18F3DE8300B51129 /* Categories */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		6EA5619E18F3DE8300B51129 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5619F18F3E00500B51129 /* NSManagedObject+RCStorageHelper.h */,
+				6EA561A018F3E00500B51129 /* NSManagedObject+RCStorageHelper.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		6EA561A418F3E09D00B51129 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6EA561A918F3E12600B51129 /* Model.xcdatamodeld */,
+				6EA561C818F43C4900B51129 /* Weather.h */,
+				6EA561C918F43C4900B51129 /* Weather.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6EA561A518F3E0A500B51129 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5617718F3DDEB00B51129 /* RCAppDelegate.h */,
+				6EA5617818F3DDEB00B51129 /* RCAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6EA561A618F3E0B500B51129 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5617D18F3DDEB00B51129 /* RCViewController.h */,
+				6EA5617E18F3DDEB00B51129 /* RCViewController.m */,
+				6EA561AF18F3E62A00B51129 /* RCTableViewController.h */,
+				6EA561B018F3E62A00B51129 /* RCTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6EA561A718F3E0C400B51129 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5617A18F3DDEB00B51129 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6EA561A818F3E0D000B51129 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5618018F3DDEB00B51129 /* Images.xcassets */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6EA5616418F3DDEB00B51129 /* RCStorageHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EA5619718F3DDEB00B51129 /* Build configuration list for PBXNativeTarget "RCStorageHelper" */;
+			buildPhases = (
+				6EA5616118F3DDEB00B51129 /* Sources */,
+				6EA5616218F3DDEB00B51129 /* Frameworks */,
+				6EA5616318F3DDEB00B51129 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCStorageHelper;
+			productName = RCStorageHelper;
+			productReference = 6EA5616518F3DDEB00B51129 /* RCStorageHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6EA5618518F3DDEB00B51129 /* RCStorageHelperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EA5619A18F3DDEB00B51129 /* Build configuration list for PBXNativeTarget "RCStorageHelperTests" */;
+			buildPhases = (
+				6EA5618218F3DDEB00B51129 /* Sources */,
+				6EA5618318F3DDEB00B51129 /* Frameworks */,
+				6EA5618418F3DDEB00B51129 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EA5618C18F3DDEB00B51129 /* PBXTargetDependency */,
+			);
+			name = RCStorageHelperTests;
+			productName = RCStorageHelperTests;
+			productReference = 6EA5618618F3DDEB00B51129 /* RCStorageHelperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6EA5615D18F3DDEB00B51129 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RC;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = RidgeCorn;
+				TargetAttributes = {
+					6EA5618518F3DDEB00B51129 = {
+						TestTargetID = 6EA5616418F3DDEB00B51129;
+					};
+				};
+			};
+			buildConfigurationList = 6EA5616018F3DDEB00B51129 /* Build configuration list for PBXProject "RCStorageHelper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6EA5615C18F3DDEB00B51129;
+			productRefGroup = 6EA5616618F3DDEB00B51129 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6EA5616418F3DDEB00B51129 /* RCStorageHelper */,
+				6EA5618518F3DDEB00B51129 /* RCStorageHelperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6EA5616318F3DDEB00B51129 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA5618118F3DDEB00B51129 /* Images.xcassets in Resources */,
+				6EA5617318F3DDEB00B51129 /* InfoPlist.strings in Resources */,
+				6EA5617C18F3DDEB00B51129 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EA5618418F3DDEB00B51129 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA5619218F3DDEB00B51129 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6EA5616118F3DDEB00B51129 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA561B118F3E62A00B51129 /* RCTableViewController.m in Sources */,
+				6EA5617518F3DDEB00B51129 /* main.m in Sources */,
+				6EA5617918F3DDEB00B51129 /* RCAppDelegate.m in Sources */,
+				6EA561CA18F43C4900B51129 /* Weather.m in Sources */,
+				6EA561AB18F3E12600B51129 /* Model.xcdatamodeld in Sources */,
+				6EA561A118F3E00500B51129 /* NSManagedObject+RCStorageHelper.m in Sources */,
+				6EA5617F18F3DDEB00B51129 /* RCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EA5618218F3DDEB00B51129 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA5619418F3DDEB00B51129 /* RCStorageHelperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EA5618C18F3DDEB00B51129 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EA5616418F3DDEB00B51129 /* RCStorageHelper */;
+			targetProxy = 6EA5618B18F3DDEB00B51129 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6EA5617118F3DDEB00B51129 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EA5617218F3DDEB00B51129 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6EA5617A18F3DDEB00B51129 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EA5617B18F3DDEB00B51129 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6EA5619018F3DDEB00B51129 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EA5619118F3DDEB00B51129 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6EA5619518F3DDEB00B51129 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6EA5619618F3DDEB00B51129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6EA5619818F3DDEB00B51129 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RCStorageHelper/RCStorageHelper-Prefix.pch";
+				INFOPLIST_FILE = "RCStorageHelper/RCStorageHelper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6EA5619918F3DDEB00B51129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RCStorageHelper/RCStorageHelper-Prefix.pch";
+				INFOPLIST_FILE = "RCStorageHelper/RCStorageHelper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6EA5619B18F3DDEB00B51129 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RCStorageHelper.app/RCStorageHelper";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RCStorageHelper/RCStorageHelper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RCStorageHelperTests/RCStorageHelperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6EA5619C18F3DDEB00B51129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RCStorageHelper.app/RCStorageHelper";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RCStorageHelper/RCStorageHelper-Prefix.pch";
+				INFOPLIST_FILE = "RCStorageHelperTests/RCStorageHelperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6EA5616018F3DDEB00B51129 /* Build configuration list for PBXProject "RCStorageHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EA5619518F3DDEB00B51129 /* Debug */,
+				6EA5619618F3DDEB00B51129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EA5619718F3DDEB00B51129 /* Build configuration list for PBXNativeTarget "RCStorageHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EA5619818F3DDEB00B51129 /* Debug */,
+				6EA5619918F3DDEB00B51129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EA5619A18F3DDEB00B51129 /* Build configuration list for PBXNativeTarget "RCStorageHelperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EA5619B18F3DDEB00B51129 /* Debug */,
+				6EA5619C18F3DDEB00B51129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6EA561A918F3E12600B51129 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6EA561AA18F3E12600B51129 /* Model.xcdatamodel */,
+			);
+			currentVersion = 6EA561AA18F3E12600B51129 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6EA5615D18F3DDEB00B51129 /* Project object */;
+}
