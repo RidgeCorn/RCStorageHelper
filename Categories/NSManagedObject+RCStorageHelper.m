@@ -131,6 +131,10 @@
     [self updateFromDictionary:dict dateFormatter:dateFormatter withMapping:nil];
 }
 
+- (void)updateFromDictionary:(NSDictionary *)dict {
+    [self updateFromDictionary:dict dateFormatter:nil withMapping:nil];
+}
+
 - (void)updateFromData:(NSData *)data dateFormatter:(NSDateFormatter *)dateFormatter withMapping:(NSDictionary *)mapping {
     NSError *error = nil;
     
@@ -150,4 +154,9 @@
 - (void)updateFromData:(NSData *)data dateFormatter:(NSDateFormatter *)dateFormatter {
     [self updateFromData:data dateFormatter:dateFormatter withMapping:nil];
 }
+
+- (void)updateFromData:(NSData *)data {
+    [self updateFromData:data dateFormatter:nil withMapping:nil];
+}
+
 @end

@@ -33,9 +33,11 @@
 - (void)updateFromDictionary:(NSDictionary *)dict withMapping:(NSDictionary *)mapping;
 - (void)updateFromDictionary:(NSDictionary *)dict dateFormatter:(NSDateFormatter *)dateFormatter;
 - (void)updateFromDictionary:(NSDictionary *)dict dateFormatter:(NSDateFormatter *)dateFormatter withMapping:(NSDictionary *)mapping;
+- (void)updateFromDictionary:(NSDictionary *)dict;
 
 - (void)updateFromData:(NSData *)data dateFormatter:(NSDateFormatter *)dateFormatter;
 - (void)updateFromData:(NSData *)data withMapping:(NSDictionary *)mapping;
 - (void)updateFromData:(NSData *)data dateFormatter:(NSDateFormatter *)dateFormatter withMapping:(NSDictionary *)mapping;
+- (void)updateFromData:(NSData *)data;
 
 @end
