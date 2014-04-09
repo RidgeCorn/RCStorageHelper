@@ -7,17 +7,17 @@
 //
 
 #import "Weather.h"
+#import "City.h"
 
 
 @implementation Weather
 
-@dynamic city;
-@dynamic cityId;
+@dynamic date;
 @dynamic humidity;
 @dynamic temperature;
 @dynamic updateTime;
 @dynamic windDirection;
 @dynamic windSpeed;
-@dynamic date;
+@dynamic city;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "RCTableViewController.h"
 #import "Weather.h"
+#import "City.h"
 
 @interface RCTableViewController ()
 
@@ -80,7 +81,7 @@
     }
     
     Weather *weather = (Weather *)[_data objectAtIndex:indexPath.row];
-    [cell.textLabel setText:[NSString stringWithFormat:@"更新时间: %@ \n城市: %@ \n温度: %@℃ \n风速: %@ \n风向: %@ \n湿度: %@", weather.updateTime, weather.city, weather.temperature, weather.windSpeed, weather.windDirection, weather.humidity]];
+    [cell.textLabel setText:[NSString stringWithFormat:@"更新时间: %@ \n城市: %@ \n温度: %@℃ \n风速: %@ \n风向: %@ \n湿度: %@", weather.updateTime, weather.city.name, weather.temperature, weather.windSpeed, weather.windDirection, weather.humidity]];
     [cell.textLabel setNumberOfLines:10];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     

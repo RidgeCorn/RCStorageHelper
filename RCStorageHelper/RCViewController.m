@@ -10,12 +10,14 @@
 #import "RCTableViewController.h"
 #import <objc/runtime.h>
 #import "Weather.h"
+#import "City.h"
 #import "NSManagedObject+RCStorageHelper.h"
 
 #define StoreURL [NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:kRCDBFileName]];
 
 static NSString * const kRCDBFileName = @"Model.sqlite";
 static NSString * const kRCDBWeatherEntityName = @"Weather";
+static NSString * const kRCDBCityEntityName = @"City";
 
 @interface RCViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *update;
@@ -36,6 +38,8 @@ static NSString * const kRCDBWeatherEntityName = @"Weather";
     [super viewDidLoad];
     
     [self launchCoreData];
+    
+    [self importCity];
 }
 
 - (void)didReceiveMemoryWarning
@@ -133,8 +137,6 @@ static NSString * const kRCDBWeatherEntityName = @"Weather";
     Weather *weather = (Weather *)[NSEntityDescription insertNewObjectForEntityForName:kRCDBWeatherEntityName inManagedObjectContext:_managedObjectContext];
 
     NSDictionary *mapping = @{
-                              @"city": @"weatherinfo.city",
-                              @"cityId": @"weatherinfo.cityid",
                               @"temperature": @"weatherinfo.temp",
                               @"windDirection": @"weatherinfo.WD",
                               @"windSpeed": @"weatherinfo.WS",
@@ -142,11 +144,17 @@ static NSString * const kRCDBWeatherEntityName = @"Weather";
                               @"updateTime": @"weatherinfo.time"
                               };
     
-    [weather updateFromData:data withMapping:mapping];
+    NSDictionary *weatherDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
+    [weather updateFromDictionary:weatherDict withMapping:mapping];
+    
+    City *city = [self findCityById:[weatherDict valueForKeyPath:@"weatherinfo.cityid"]];
     
     weather.date = [NSDate date];
     
-    [_weatherInfoLabel setText:[NSString stringWithFormat:@"更新时间: %@ \n城市: %@ \n温度: %@℃ \n风速: %@ \n风向: %@ \n湿度: %@", weather.updateTime, weather.city, weather.temperature, weather.windSpeed, weather.windDirection, weather.humidity]];
+    [city addWeatherObject:weather];
+    
+    [_weatherInfoLabel setText:[NSString stringWithFormat:@"更新时间: %@ \n城市: %@ \n温度: %@℃ \n风速: %@ \n风向: %@ \n湿度: %@", weather.updateTime, weather.city.name, weather.temperature, weather.windSpeed, weather.windDirection, weather.humidity]];
 }
 
 #pragma mark Query
@@ -173,9 +181,38 @@ static NSString * const kRCDBWeatherEntityName = @"Weather";
         NSLog(@"Error: %@,%@", error, [error userInfo]);
     }
     
-    NSLog(@"The count of %@: %i",entity ,[fetchResult count]);
+    NSLog(@"The count of %@: %ld",entity ,[fetchResult count]);
     
     return fetchResult;
+}
+
+- (id)findCityById:(NSString *)cityId {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    [request setEntity:[NSEntityDescription entityForName:kRCDBCityEntityName inManagedObjectContext:_managedObjectContext]];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"id == %@", cityId];
+
+    [request setPredicate:predicate];
+    
+    NSError *error = nil;
+    
+    NSArray *fetchResult = [_managedObjectContext executeFetchRequest:request error:&error];
+    
+    if (fetchResult == nil) {
+        NSLog(@"Error: %@,%@", error, [error userInfo]);
+    }
+    
+    return fetchResult[0];
+}
+
+#pragma mark - Import Data
+- (void)importCity {
+    NSDictionary *cityDict = @{@"name": @"杭州", @"id": @"101210101"};
+    
+    City *city = (City *)[NSEntityDescription insertNewObjectForEntityForName:kRCDBCityEntityName inManagedObjectContext:_managedObjectContext];
+
+    [city updateFromDictionary:cityDict];
 }
 
 @end

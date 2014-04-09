@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E7D616518F4E58800937AFE /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D616418F4E58800937AFE /* Weather.m */; };
+		6E7D61D218F576D100937AFE /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D61D118F576D100937AFE /* City.m */; };
+		6E7D61D518F576D200937AFE /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D61D418F576D200937AFE /* Weather.m */; };
 		6EA5616918F3DDEB00B51129 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616818F3DDEB00B51129 /* Foundation.framework */; };
 		6EA5616B18F3DDEB00B51129 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616A18F3DDEB00B51129 /* CoreGraphics.framework */; };
 		6EA5616D18F3DDEB00B51129 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616C18F3DDEB00B51129 /* UIKit.framework */; };
@@ -39,8 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6E7D616318F4E58800937AFE /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
-		6E7D616418F4E58800937AFE /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		6E7D61D018F576D100937AFE /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		6E7D61D118F576D100937AFE /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		6E7D61D318F576D200937AFE /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		6E7D61D418F576D200937AFE /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		6EA5616518F3DDEB00B51129 /* RCStorageHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCStorageHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA5616818F3DDEB00B51129 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6EA5616A18F3DDEB00B51129 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -187,9 +190,11 @@
 		6EA561A418F3E09D00B51129 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6E7D616318F4E58800937AFE /* Weather.h */,
-				6E7D616418F4E58800937AFE /* Weather.m */,
 				6EA561A918F3E12600B51129 /* Model.xcdatamodeld */,
+				6E7D61D318F576D200937AFE /* Weather.h */,
+				6E7D61D418F576D200937AFE /* Weather.m */,
+				6E7D61D018F576D100937AFE /* City.h */,
+				6E7D61D118F576D100937AFE /* City.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -330,8 +335,9 @@
 			files = (
 				6EA561B118F3E62A00B51129 /* RCTableViewController.m in Sources */,
 				6EA5617518F3DDEB00B51129 /* main.m in Sources */,
-				6E7D616518F4E58800937AFE /* Weather.m in Sources */,
+				6E7D61D218F576D100937AFE /* City.m in Sources */,
 				6EA5617918F3DDEB00B51129 /* RCAppDelegate.m in Sources */,
+				6E7D61D518F576D200937AFE /* Weather.m in Sources */,
 				6EA561AB18F3E12600B51129 /* Model.xcdatamodeld in Sources */,
 				6EA561A118F3E00500B51129 /* NSManagedObject+RCStorageHelper.m in Sources */,
 				6EA5617F18F3DDEB00B51129 /* RCViewController.m in Sources */,

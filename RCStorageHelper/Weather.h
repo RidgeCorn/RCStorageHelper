@@ -9,16 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class City;
 
 @interface Weather : NSManagedObject
 
-@property (nonatomic, retain) NSString * city;
-@property (nonatomic, retain) NSString * cityId;
+@property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) NSString * humidity;
 @property (nonatomic, retain) NSNumber * temperature;
 @property (nonatomic, retain) NSString * updateTime;
 @property (nonatomic, retain) NSString * windDirection;
 @property (nonatomic, retain) NSString * windSpeed;
-@property (nonatomic, retain) NSDate * date;
+@property (nonatomic, retain) City *city;
 
 @end

@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="City" representedClassName="City" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="weather" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Weather" inverseName="city" inverseEntity="Weather" syncable="YES"/>
+    </entity>
     <entity name="Weather" representedClassName="Weather" syncable="YES">
-        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="cityId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="humidity" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="temperature" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="updateTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="windDirection" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="windSpeed" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="City" inverseName="weather" inverseEntity="City" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Weather" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="Weather" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="City" positionX="-54" positionY="54" width="128" height="88"/>
     </elements>
 </model>
