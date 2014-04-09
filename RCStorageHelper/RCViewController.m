@@ -15,7 +15,7 @@
 #define StoreURL [NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:kRCDBFileName]];
 
 static NSString * const kRCDBFileName = @"Model.sqlite";
-static NSString * const kRCDBWeatherTableName = @"Weather";
+static NSString * const kRCDBWeatherEntityName = @"Weather";
 
 @interface RCViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *update;
@@ -58,7 +58,7 @@ static NSString * const kRCDBWeatherTableName = @"Weather";
 
 - (IBAction)checkOutPressed:(UIButton *)sender {
     RCTableViewController *weatherDisplayViewController = [RCTableViewController new];
-    [weatherDisplayViewController displayWithData:[self queryWithSortKeyPath:@"date"]];
+    [weatherDisplayViewController displayWithData:[self queryWeatherWithSortKeyPath:@"date"]];
     
     [self presentViewController:[[UINavigationController alloc] initWithRootViewController:weatherDisplayViewController] animated:YES completion:nil];
 }
@@ -130,7 +130,7 @@ static NSString * const kRCDBWeatherTableName = @"Weather";
 
 #pragma mark Storage
 - (void)saveWeatherWithData:(NSData *)data {
-    Weather *weather = (Weather *)[NSEntityDescription insertNewObjectForEntityForName:kRCDBWeatherTableName inManagedObjectContext:_managedObjectContext];
+    Weather *weather = (Weather *)[NSEntityDescription insertNewObjectForEntityForName:kRCDBWeatherEntityName inManagedObjectContext:_managedObjectContext];
 
     NSDictionary *mapping = @{
                               @"city": @"weatherinfo.city",
@@ -147,22 +147,17 @@ static NSString * const kRCDBWeatherTableName = @"Weather";
     weather.date = [NSDate date];
     
     [_weatherInfoLabel setText:[NSString stringWithFormat:@"更新时间: %@ \n城市: %@ \n温度: %@℃ \n风速: %@ \n风向: %@ \n湿度: %@", weather.updateTime, weather.city, weather.temperature, weather.windSpeed, weather.windDirection, weather.humidity]];
-
-    NSError *error;
-    
-    BOOL isSaveSuccess = [_managedObjectContext save:&error];
-    
-    if (!isSaveSuccess) {
-        NSLog(@"Error: %@,%@", error, [error userInfo]);
-    }
 }
 
 #pragma mark Query
-- (NSArray *)queryWithSortKeyPath:(NSString *)sortkeyPath {
+- (NSArray *)queryWeatherWithSortKeyPath:(NSString *)sortkeyPath {
+    return [self queryInEntity:kRCDBWeatherEntityName WithSortKeyPath:sortkeyPath];
+}
+
+- (NSArray *)queryInEntity:(NSString *)entity WithSortKeyPath:(NSString *)sortkeyPath {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *weather = [NSEntityDescription entityForName:kRCDBWeatherTableName inManagedObjectContext:_managedObjectContext];
     
-    [request setEntity:weather];
+    [request setEntity:[NSEntityDescription entityForName:entity inManagedObjectContext:_managedObjectContext]];
     
     if (sortkeyPath) {
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortkeyPath ascending:NO];
@@ -178,7 +173,7 @@ static NSString * const kRCDBWeatherTableName = @"Weather";
         NSLog(@"Error: %@,%@", error, [error userInfo]);
     }
     
-    NSLog(@"The count of entry:%i", [fetchResult count]);
+    NSLog(@"The count of %@: %i",entity ,[fetchResult count]);
     
     return fetchResult;
 }
