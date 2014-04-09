@@ -3,6 +3,7 @@
     <entity name="Weather" representedClassName="Weather" syncable="YES">
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cityId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="humidity" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="temperature" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="updateTime" optional="YES" attributeType="String" syncable="YES"/>
@@ -10,6 +11,6 @@
         <attribute name="windSpeed" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Weather" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Weather" positionX="-63" positionY="-18" width="128" height="165"/>
     </elements>
 </model>

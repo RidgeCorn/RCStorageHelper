@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E7D616518F4E58800937AFE /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D616418F4E58800937AFE /* Weather.m */; };
 		6EA5616918F3DDEB00B51129 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616818F3DDEB00B51129 /* Foundation.framework */; };
 		6EA5616B18F3DDEB00B51129 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616A18F3DDEB00B51129 /* CoreGraphics.framework */; };
 		6EA5616D18F3DDEB00B51129 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616C18F3DDEB00B51129 /* UIKit.framework */; };
@@ -25,7 +26,6 @@
 		6EA561A318F3E05400B51129 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA561A218F3E05400B51129 /* CoreData.framework */; };
 		6EA561AB18F3E12600B51129 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EA561A918F3E12600B51129 /* Model.xcdatamodeld */; };
 		6EA561B118F3E62A00B51129 /* RCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA561B018F3E62A00B51129 /* RCTableViewController.m */; };
-		6EA561CA18F43C4900B51129 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA561C918F43C4900B51129 /* Weather.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E7D616318F4E58800937AFE /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		6E7D616418F4E58800937AFE /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		6EA5616518F3DDEB00B51129 /* RCStorageHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCStorageHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA5616818F3DDEB00B51129 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6EA5616A18F3DDEB00B51129 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,8 +66,6 @@
 		6EA561AA18F3E12600B51129 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6EA561AF18F3E62A00B51129 /* RCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTableViewController.h; sourceTree = "<group>"; };
 		6EA561B018F3E62A00B51129 /* RCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTableViewController.m; sourceTree = "<group>"; };
-		6EA561C818F43C4900B51129 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
-		6EA561C918F43C4900B51129 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,9 +187,9 @@
 		6EA561A418F3E09D00B51129 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6E7D616318F4E58800937AFE /* Weather.h */,
+				6E7D616418F4E58800937AFE /* Weather.m */,
 				6EA561A918F3E12600B51129 /* Model.xcdatamodeld */,
-				6EA561C818F43C4900B51129 /* Weather.h */,
-				6EA561C918F43C4900B51129 /* Weather.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -330,8 +330,8 @@
 			files = (
 				6EA561B118F3E62A00B51129 /* RCTableViewController.m in Sources */,
 				6EA5617518F3DDEB00B51129 /* main.m in Sources */,
+				6E7D616518F4E58800937AFE /* Weather.m in Sources */,
 				6EA5617918F3DDEB00B51129 /* RCAppDelegate.m in Sources */,
-				6EA561CA18F43C4900B51129 /* Weather.m in Sources */,
 				6EA561AB18F3E12600B51129 /* Model.xcdatamodeld in Sources */,
 				6EA561A118F3E00500B51129 /* NSManagedObject+RCStorageHelper.m in Sources */,
 				6EA5617F18F3DDEB00B51129 /* RCViewController.m in Sources */,

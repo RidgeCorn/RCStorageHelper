@@ -30,7 +30,7 @@
 
 @implementation NSManagedObject (RCStorageHelper)
 
-- (void)importFromDictionary:(NSDictionary *)dict dateFormatter:(NSDateFormatter *)dateFormatter withMapping:(NSDictionary *)mapping {
+- (void)updateFromDictionary:(NSDictionary *)dict dateFormatter:(NSDateFormatter *)dateFormatter withMapping:(NSDictionary *)mapping {
     if ([dict isKindOfClass:[NSDictionary class]]) {
         NSDictionary *attributes = [[self entity] attributesByName];
         
@@ -123,15 +123,15 @@
     }
 }
 
-- (void)importFromDictionary:(NSDictionary *)dict withMapping:(NSDictionary *)mapping {
-    [self importFromDictionary:dict dateFormatter:nil withMapping:mapping];
+- (void)updateFromDictionary:(NSDictionary *)dict withMapping:(NSDictionary *)mapping {
+    [self updateFromDictionary:dict dateFormatter:nil withMapping:mapping];
 }
 
-- (void)importFromDictionary:(NSDictionary *)dict dateFormatter:(NSDateFormatter *)dateFormatter {
-    [self importFromDictionary:dict dateFormatter:dateFormatter withMapping:nil];
+- (void)updateFromDictionary:(NSDictionary *)dict dateFormatter:(NSDateFormatter *)dateFormatter {
+    [self updateFromDictionary:dict dateFormatter:dateFormatter withMapping:nil];
 }
 
-- (void)importFromData:(NSData *)data dateFormatter:(NSDateFormatter *)dateFormatter withMapping:(NSDictionary *)mapping {
+- (void)updateFromData:(NSData *)data dateFormatter:(NSDateFormatter *)dateFormatter withMapping:(NSDictionary *)mapping {
     NSError *error = nil;
     
     id dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
@@ -139,15 +139,15 @@
     if (error) {
         NSLog(@"Error: %@", error.description);
     } else {
-        [self importFromDictionary:dict dateFormatter:dateFormatter withMapping:mapping];
+        [self updateFromDictionary:dict dateFormatter:dateFormatter withMapping:mapping];
     }
 }
 
-- (void)importFromData:(NSData *)data withMapping:(NSDictionary *)mapping {
-    [self importFromData:data dateFormatter:nil withMapping:mapping];
+- (void)updateFromData:(NSData *)data withMapping:(NSDictionary *)mapping {
+    [self updateFromData:data dateFormatter:nil withMapping:mapping];
 }
 
-- (void)importFromData:(NSData *)data dateFormatter:(NSDateFormatter *)dateFormatter {
-    [self importFromData:data dateFormatter:dateFormatter withMapping:nil];
+- (void)updateFromData:(NSData *)data dateFormatter:(NSDateFormatter *)dateFormatter {
+    [self updateFromData:data dateFormatter:dateFormatter withMapping:nil];
 }
 @end

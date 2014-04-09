@@ -12,6 +12,8 @@
 #import "Weather.h"
 #import "NSManagedObject+RCStorageHelper.h"
 
+#define StoreURL [NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:kRCDBFileName]];
+
 static NSString * const kRCDBFileName = @"Model.sqlite";
 static NSString * const kRCDBWeatherTableName = @"Weather";
 
@@ -32,6 +34,7 @@ static NSString * const kRCDBWeatherTableName = @"Weather";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self launchCoreData];
 }
 
@@ -55,7 +58,7 @@ static NSString * const kRCDBWeatherTableName = @"Weather";
 
 - (IBAction)checkOutPressed:(UIButton *)sender {
     RCTableViewController *weatherDisplayViewController = [RCTableViewController new];
-    [weatherDisplayViewController displayWithData:[self queryWithSortKeyPath:@"updateTime"]];
+    [weatherDisplayViewController displayWithData:[self queryWithSortKeyPath:@"date"]];
     
     [self presentViewController:[[UINavigationController alloc] initWithRootViewController:weatherDisplayViewController] animated:YES completion:nil];
 }
@@ -99,7 +102,7 @@ static NSString * const kRCDBWeatherTableName = @"Weather";
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
     if ( !_persistentStoreCoordinator) {
-        NSURL *storeUrl = [NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:kRCDBFileName]];
+        NSURL *storeUrl = StoreURL;
         NSError *error = nil;
         
         _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc]initWithManagedObjectModel:[self managedObjectModel]];
@@ -139,34 +142,18 @@ static NSString * const kRCDBWeatherTableName = @"Weather";
                               @"updateTime": @"weatherinfo.time"
                               };
     
-    [weather importFromData:data withMapping:mapping];
+    [weather updateFromData:data withMapping:mapping];
+    
+    weather.date = [NSDate date];
     
     [_weatherInfoLabel setText:[NSString stringWithFormat:@"更新时间: %@ \n城市: %@ \n温度: %@℃ \n风速: %@ \n风向: %@ \n湿度: %@", weather.updateTime, weather.city, weather.temperature, weather.windSpeed, weather.windDirection, weather.humidity]];
 
-    NSArray *tmpwa = [self queryWithSortKeyPath:@"updateTime"];
-    Weather *tmpw = nil;
+    NSError *error;
     
-    if (tmpwa && [tmpwa count] > 1) {
-        tmpw = tmpwa[1];
-    }
+    BOOL isSaveSuccess = [_managedObjectContext save:&error];
     
-    if ( !(tmpw && [tmpw.updateTime isEqualToString:weather.updateTime])) {
-        if (tmpwa && [tmpwa count] > 2) {
-            tmpw = tmpwa[2];
-        }
-        if ( !(tmpw && [tmpw.updateTime isEqualToString:weather.updateTime])) {
-            NSError *error;
-            
-            BOOL isSaveSuccess = [_managedObjectContext save:&error];
-            
-            if (!isSaveSuccess) {
-                NSLog(@"Error: %@,%@", error, [error userInfo]);
-            }
-        } else{
-            [_managedObjectContext deleteObject:weather];
-        }
-    } else{
-        [_managedObjectContext deleteObject:weather];
+    if (!isSaveSuccess) {
+        NSLog(@"Error: %@,%@", error, [error userInfo]);
     }
 }
 
@@ -176,6 +163,7 @@ static NSString * const kRCDBWeatherTableName = @"Weather";
     NSEntityDescription *weather = [NSEntityDescription entityForName:kRCDBWeatherTableName inManagedObjectContext:_managedObjectContext];
     
     [request setEntity:weather];
+    
     if (sortkeyPath) {
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortkeyPath ascending:NO];
         NSArray *sortDescriptions = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
@@ -194,6 +182,5 @@ static NSString * const kRCDBWeatherTableName = @"Weather";
     
     return fetchResult;
 }
-
 
 @end

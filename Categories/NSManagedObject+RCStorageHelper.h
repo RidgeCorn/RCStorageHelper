@@ -30,12 +30,12 @@
 
 @interface NSManagedObject (RCStorageHelper)
 
-- (void)importFromDictionary:(NSDictionary *)dict withMapping:(NSDictionary *)mapping;
-- (void)importFromDictionary:(NSDictionary *)dict dateFormatter:(NSDateFormatter *)dateFormatter;
-- (void)importFromDictionary:(NSDictionary *)dict dateFormatter:(NSDateFormatter *)dateFormatter withMapping:(NSDictionary *)mapping;
+- (void)updateFromDictionary:(NSDictionary *)dict withMapping:(NSDictionary *)mapping;
+- (void)updateFromDictionary:(NSDictionary *)dict dateFormatter:(NSDateFormatter *)dateFormatter;
+- (void)updateFromDictionary:(NSDictionary *)dict dateFormatter:(NSDateFormatter *)dateFormatter withMapping:(NSDictionary *)mapping;
 
-- (void)importFromData:(NSData *)data dateFormatter:(NSDateFormatter *)dateFormatter;
-- (void)importFromData:(NSData *)data withMapping:(NSDictionary *)mapping;
-- (void)importFromData:(NSData *)data dateFormatter:(NSDateFormatter *)dateFormatter withMapping:(NSDictionary *)mapping;
+- (void)updateFromData:(NSData *)data dateFormatter:(NSDateFormatter *)dateFormatter;
+- (void)updateFromData:(NSData *)data withMapping:(NSDictionary *)mapping;
+- (void)updateFromData:(NSData *)data dateFormatter:(NSDateFormatter *)dateFormatter withMapping:(NSDictionary *)mapping;
 
 @end
