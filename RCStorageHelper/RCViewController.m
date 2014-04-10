@@ -11,7 +11,7 @@
 #import <objc/runtime.h>
 #import "Weather.h"
 #import "City.h"
-#import "NSManagedObject+RCStorageHelper.h"
+#import "NSManagedObject+RCStorage.h"
 
 #define StoreURL [NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:kRCDBFileName]];
 

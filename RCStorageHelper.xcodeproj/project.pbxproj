@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6E7D61D218F576D100937AFE /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D61D118F576D100937AFE /* City.m */; };
 		6E7D61D518F576D200937AFE /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D61D418F576D200937AFE /* Weather.m */; };
+		6E7D61E218F5966700937AFE /* NSManagedObject+RCStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D61DE18F5966700937AFE /* NSManagedObject+RCStorage.m */; };
+		6E7D61E618F596BB00937AFE /* NSString+RCStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D61E518F596BB00937AFE /* NSString+RCStorage.m */; };
 		6EA5616918F3DDEB00B51129 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616818F3DDEB00B51129 /* Foundation.framework */; };
 		6EA5616B18F3DDEB00B51129 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616A18F3DDEB00B51129 /* CoreGraphics.framework */; };
 		6EA5616D18F3DDEB00B51129 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616C18F3DDEB00B51129 /* UIKit.framework */; };
@@ -23,7 +25,6 @@
 		6EA5618A18F3DDEB00B51129 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA5616C18F3DDEB00B51129 /* UIKit.framework */; };
 		6EA5619218F3DDEB00B51129 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EA5619018F3DDEB00B51129 /* InfoPlist.strings */; };
 		6EA5619418F3DDEB00B51129 /* RCStorageHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5619318F3DDEB00B51129 /* RCStorageHelperTests.m */; };
-		6EA561A118F3E00500B51129 /* NSManagedObject+RCStorageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA561A018F3E00500B51129 /* NSManagedObject+RCStorageHelper.m */; };
 		6EA561A318F3E05400B51129 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA561A218F3E05400B51129 /* CoreData.framework */; };
 		6EA561AB18F3E12600B51129 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EA561A918F3E12600B51129 /* Model.xcdatamodeld */; };
 		6EA561B118F3E62A00B51129 /* RCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA561B018F3E62A00B51129 /* RCTableViewController.m */; };
@@ -44,6 +45,10 @@
 		6E7D61D118F576D100937AFE /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		6E7D61D318F576D200937AFE /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
 		6E7D61D418F576D200937AFE /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		6E7D61DD18F5966700937AFE /* NSManagedObject+RCStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+RCStorage.h"; sourceTree = "<group>"; };
+		6E7D61DE18F5966700937AFE /* NSManagedObject+RCStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+RCStorage.m"; sourceTree = "<group>"; };
+		6E7D61E418F596BB00937AFE /* NSString+RCStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RCStorage.h"; sourceTree = "<group>"; };
+		6E7D61E518F596BB00937AFE /* NSString+RCStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RCStorage.m"; sourceTree = "<group>"; };
 		6EA5616518F3DDEB00B51129 /* RCStorageHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCStorageHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA5616818F3DDEB00B51129 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6EA5616A18F3DDEB00B51129 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,8 +68,6 @@
 		6EA5618F18F3DDEB00B51129 /* RCStorageHelperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RCStorageHelperTests-Info.plist"; sourceTree = "<group>"; };
 		6EA5619118F3DDEB00B51129 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6EA5619318F3DDEB00B51129 /* RCStorageHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCStorageHelperTests.m; sourceTree = "<group>"; };
-		6EA5619F18F3E00500B51129 /* NSManagedObject+RCStorageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+RCStorageHelper.h"; path = "Categories/NSManagedObject+RCStorageHelper.h"; sourceTree = "<group>"; };
-		6EA561A018F3E00500B51129 /* NSManagedObject+RCStorageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+RCStorageHelper.m"; path = "Categories/NSManagedObject+RCStorageHelper.m"; sourceTree = "<group>"; };
 		6EA561A218F3E05400B51129 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6EA561AA18F3E12600B51129 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6EA561AF18F3E62A00B51129 /* RCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTableViewController.h; sourceTree = "<group>"; };
@@ -96,6 +99,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E7D61DC18F5966700937AFE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6E7D61DD18F5966700937AFE /* NSManagedObject+RCStorage.h */,
+				6E7D61DE18F5966700937AFE /* NSManagedObject+RCStorage.m */,
+			);
+			name = CoreData;
+			path = Additions/CoreData;
+			sourceTree = "<group>";
+		};
+		6E7D61DF18F5966700937AFE /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				6E7D61E418F596BB00937AFE /* NSString+RCStorage.h */,
+				6E7D61E518F596BB00937AFE /* NSString+RCStorage.m */,
+			);
+			name = NSString;
+			path = Additions/NSString;
+			sourceTree = "<group>";
+		};
 		6EA5615C18F3DDEB00B51129 = {
 			isa = PBXGroup;
 			children = (
@@ -173,18 +196,18 @@
 		6EA5619D18F3DE6600B51129 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				6EA5619E18F3DE8300B51129 /* Categories */,
+				6EA5619E18F3DE8300B51129 /* Additions */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
 		};
-		6EA5619E18F3DE8300B51129 /* Categories */ = {
+		6EA5619E18F3DE8300B51129 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
-				6EA5619F18F3E00500B51129 /* NSManagedObject+RCStorageHelper.h */,
-				6EA561A018F3E00500B51129 /* NSManagedObject+RCStorageHelper.m */,
+				6E7D61DC18F5966700937AFE /* CoreData */,
+				6E7D61DF18F5966700937AFE /* NSString */,
 			);
-			name = Categories;
+			name = Additions;
 			sourceTree = "<group>";
 		};
 		6EA561A418F3E09D00B51129 /* Model */ = {
@@ -334,12 +357,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EA561B118F3E62A00B51129 /* RCTableViewController.m in Sources */,
+				6E7D61E618F596BB00937AFE /* NSString+RCStorage.m in Sources */,
 				6EA5617518F3DDEB00B51129 /* main.m in Sources */,
+				6E7D61E218F5966700937AFE /* NSManagedObject+RCStorage.m in Sources */,
 				6E7D61D218F576D100937AFE /* City.m in Sources */,
 				6EA5617918F3DDEB00B51129 /* RCAppDelegate.m in Sources */,
 				6E7D61D518F576D200937AFE /* Weather.m in Sources */,
 				6EA561AB18F3E12600B51129 /* Model.xcdatamodeld in Sources */,
-				6EA561A118F3E00500B51129 /* NSManagedObject+RCStorageHelper.m in Sources */,
 				6EA5617F18F3DDEB00B51129 /* RCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  NSManagedObject+RCStorageHelper.h
+//  NSManagedObject+RCStorage.h
 //  RCStorageHelper
 //
 //  Created by Looping on 14-4-8.
@@ -28,7 +28,7 @@
 
 #import <CoreData/CoreData.h>
 
-@interface NSManagedObject (RCStorageHelper)
+@interface NSManagedObject (RCStorage)
 
 - (void)updateFromDictionary:(NSDictionary *)dict withMapping:(NSDictionary *)mapping;
 - (void)updateFromDictionary:(NSDictionary *)dict dateFormatter:(NSDateFormatter *)dateFormatter;

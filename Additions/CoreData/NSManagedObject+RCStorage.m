@@ -26,9 +26,9 @@
 //  THE SOFTWARE.
 //
 
-#import "NSManagedObject+RCStorageHelper.h"
+#import "NSManagedObject+RCStorage.h"
 
-@implementation NSManagedObject (RCStorageHelper)
+@implementation NSManagedObject (RCStorage)
 
 - (void)updateFromDictionary:(NSDictionary *)dict dateFormatter:(NSDateFormatter *)dateFormatter withMapping:(NSDictionary *)mapping {
     if ([dict isKindOfClass:[NSDictionary class]]) {

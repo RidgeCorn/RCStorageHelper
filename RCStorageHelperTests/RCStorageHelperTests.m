@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "NSString+RCStorage.h"
 
 @interface RCStorageHelperTests : XCTestCase
 
@@ -26,9 +27,16 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+- (void)testNSStringStorageAddition {
+    NSString *string = @"you_1_are_2_so_3_cute_4";
+    NSString *theNewString = [string convertFromUnderscoreCaseToCamelCase];
+
+    NSAssert([theNewString isEqualToString:@"you1Are2So3Cute4"], @"convertFromUnderscoreCaseToCamelCase error");
+    
+    NSString *theNewNewString = [theNewString convertFromCamelCaseToUnderscoreCase];
+
+    NSAssert([theNewNewString isEqualToString:string], @"convertFromCamelCaseToUnderscoreCase error");
+
 }
 
 @end
